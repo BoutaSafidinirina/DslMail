@@ -1,0 +1,19 @@
+grammar org.xtext.example.mydsl.Mail with org.eclipse.xtext.common.Terminals
+
+generate mail "http://www.xtext.org/example/mydsl/Mail"
+
+Model:
+    AlefasoMailaka;
+
+AlefasoMailaka:
+    'AlefasoMailaka' '['
+        'Hafatra' ':' message=STRING
+        'Lohahevitra' ':' objet_de_mail=STRING
+        'Anyaminy' ':' recipients+=EmailRecipient (',' recipients+=EmailRecipient)*
+        'Mpandefa' ':' sender=STRING
+        'Tenymiafina' ':' password=STRING
+    ']';
+
+EmailRecipient:
+    email=STRING;
+	

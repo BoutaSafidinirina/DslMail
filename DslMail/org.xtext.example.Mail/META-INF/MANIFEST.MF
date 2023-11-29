@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.example.Mail
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.Mail
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.Mail; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: org.xtext.example.mydsl.mail,
+ org.xtext.example.mydsl.parser.antlr.internal,
+ org.xtext.example.mydsl.mail.impl,
+ org.xtext.example.mydsl.scoping,
+ org.xtext.example.mydsl.services,
+ org.xtext.example.mydsl.generator,
+ org.xtext.example.mydsl.mail.util,
+ org.xtext.example.mydsl.validation,
+ org.xtext.example.mydsl,
+ org.xtext.example.mydsl.serializer,
+ org.xtext.example.mydsl.parser.antlr
+Import-Package: org.apache.log4j
